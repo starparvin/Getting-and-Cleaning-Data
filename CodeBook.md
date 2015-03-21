@@ -24,22 +24,11 @@ Cleaning tha data procedure:
         
         laying
 
-* The script also appropriately labels the data set with descriptive names: all feature names (attributes) and activity names are converted to lower case, underscores and brackets () are removed. Then it merges the 10299x66 data frame containing features with 10299x1 data frames containing activity labels and subject IDs. The result is saved as merged_clean_data.txt, a 10299x68 data frame such that the first column contains subject IDs, the second column activity names, and the last 66 columns are measurements. Subject IDs are integers between 1 and 30 inclusive. The names of the attributes are similar to the following:
-
-        tbodyacc-mean-x 
-        
-        tbodyacc-mean-y 
-        
-        tbodyacc-mean-z 
-        
-        tbodyacc-std-x 
-        
-        tbodyacc-std-y 
-        
-        tbodyacc-std-z 
-        
-        tgravityacc-mean-x 
-        
-        tgravityacc-mean-y
-
-* Finally, the script creates a 2nd, independent tidy data set with the average of each measurement for each activity and each subject. The result is saved as data_set_with_the_averages.txt, a 180x68 data frame, where as before, the first column contains subject IDs, the second column contains activity names (see below), and then the averages for each of the 66 attributes are in columns 3...68. There are 30 subjects and 6 activities, thus 180 rows in this data set with averages.
+* Then we need to merge the X,Y and Subject data frame by cbind function to connect them by column. The result is the data_all data frame 10299*68.
+* The first 66 columns holds the measurements, 67th column holds the activity for those measurements, 68th column holds the Subject ID performing the activity.
+* The script then group the data by subject and activity using group_by function.
+* Using summarise_each function we can calculate the Average of each measurement per activity per subject.
+* The result data frame contains 180 row (6 Activity * 30 subject) and 68 column. 
+* First and second column tells the activity and the subject and the rest 66 columns are the average values.
+* The script then write the clean data into the file called "tidy_clean_data.txt"
+* 
