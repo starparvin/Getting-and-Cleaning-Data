@@ -8,8 +8,9 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 * Change working directory of R to the folder holding both data and the script.
 * To run the script type:  > source("run_analysis.R") 
 * Alternatively you can run the script from command line: $Rscript run_analysis.R
-## The Output
-* The Script will read the data, transform it and clean it according to the requirments and Write the clean
+
+## Output
+The Script will read the data, transform it and clean it according to the requirments and Write the clean data into a file named: "tidy_clean_data.txt"
 
 
 
