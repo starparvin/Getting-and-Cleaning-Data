@@ -7,7 +7,7 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 * Download the script: run_analysis.R  from this repository
 * Change working directory of R to the folder holding both data and the script.
 * To run the script type: 
-** > source("run_analysis.R")
+** <src> source("run_analysis.R") </src>
 * Alternatively you can run the script from command line
 ** Rscript run_analysis.R
 
