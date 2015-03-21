@@ -31,4 +31,3 @@ Cleaning tha data procedure:
 * The result data frame contains 180 row (6 Activity * 30 subject) and 68 column. 
 * First and second column tells the activity and the subject and the rest 66 columns are the average values.
 * The script then write the clean data into the file called "tidy_clean_data.txt"
-* 
